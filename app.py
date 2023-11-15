@@ -42,7 +42,8 @@ def post_cupcake():
     db.session.commit()
 
     all_cupcakes = [cupcake.serialize() for cupcake in Cupcake.query.all()]
-    return jsonify(all_cupcakes)
+    jsonify(all_cupcakes)
+    return render_template('home.html', flavor=flavor, size=size, rating=rating, image=image)
 
 @app.route('/api/cupcakes/<int:id>', methods=['PATCH'])
 def update_cupcake(id):
