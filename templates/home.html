@@ -1,12 +1,28 @@
+
+<html lang="en">
+
+<head>
+<link rel='stylesheet' href="static/app.css">
+
+</head>
+
+<body>
 <h1>WELCOME TO MY CUPCAKE APP </h1>
 
 
-<form action= '/api/cupcakes' method='POST'>
-    <input type='text' name= 'flavor' placeholder='flavor'>
-    <input type='text' name='size' placeholder= 'size'>
-    <input type= 'integer' name= 'rating' placeholder= 'rating'>
-    <input type= 'text' name='image' placeholder='image'>
+<form class = "cupcake" action= '/api/cupcakes' method='POST'>
+    <input type='text' id= "flavor" name= 'flavor' placeholder='flavor'>
+    <input type='text' id = "size" name='size' placeholder= 'size'>
+    <input type= 'integer' id= "rating" name= 'rating' placeholder= 'rating'>
+    <input type= 'text' id= 'image'name='image' placeholder='image'>
 
-    <button> Submit Cupcake </button>
+    <button id='button'> Submit Cupcake </button>
 </form>
-    
+
+
+</body>
+</html>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src='static/app.js'></script>
+
+

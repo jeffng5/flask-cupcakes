@@ -2,8 +2,10 @@
 from models import Cupcake, db, connect_db
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, redirect, flash, session, request, jsonify
+from flask_cors import CORS
 
 app= Flask(__name__)
+
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///jeffreyng'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
